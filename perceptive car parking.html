@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Perceprive car parking</title>
+<style>
+body{
+background-image: url("./car parking.jpg")
+background-position:center;
+background-size: cover;
+position:absolute;
+}
+</style>
+</head>
+<body bgcolor="grey">
+<script type="text/javascript">
+	function validate(){
+		var uname=document.getElementById('username').value;
+		var password=document.getElementById('password').value;
+		
+		if(uname=="" || password==""){
+			alert("Fill the fields");
+			return false;
+		}
+		else if(uname in k){
+			if(password==k[uname]){
+				return true;
+			}
+			else{
+				document.getElementById('passwordlabel').style.visibility="visible";
+				count--;
+				if(count==0){
+					alert("Sorry! Reached password limit");
+					window.location.href="password.html";
+				}
+				return false;
+			}
+			
+		}
+		else{
+			document.getElementById('usernlabl').style.visibility="visible";
+			return false;
+		}
+	}
+</script>
+	
+<h1 align="center">Welcome to LOGIN PAGE</h1>
+<marquee> Fill the details</marquee>
+<br><br><br>
+<form onsubmit="return validate()">
+
+
+
+<tr>
+<td><label >UserName:</label></td>
