@@ -1,0 +1,82 @@
+<DOCTYPE html!>
+<html>
+<head>
+<title> CANCELLING SLOT </title>
+<style>
+body{
+background-image:url("./car parking.jpg");
+background-position:center;
+background-size: cover;
+position:absolute;
+}
+</style>
+
+</head>
+<body bgcolor="grey">
+	<script type="text/javascript">
+		function validate(id){
+			var username=document.book.User_Name.value;
+			var Type of Vechile=document.book.Username.value;
+                        var Vechile Number=document.book.Username.value;
+                        var Location=document.book.Username.value;
+                        var Time=document.book.Username.value;
+                        var Reason=document.book.Username.value;
+			var patt=/^[a-zA-Z]+$/;
+			if(patt.test(fname)!=true){
+				alert("FirstName should contain only Characters");
+				return false;
+			}
+			if(patt.test(lname)!=true){
+				alert("LastName should contain only Characters");
+				return false;
+			}
+			if(username.length<6 | username.length>15){
+				alert("Length should be >6 and <15");
+				return false;
+			}
+			var passpatt=/(^[a-zA-z])(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#!]).{6,}$/;
+			if(passpatt.test(password)!=true){
+				alert("Password length is of minimum 6 characters and should contain at least one upper case, one lower case, one digit, one special character and it should start with an alphabet only.");
+				return false;
+			}
+		}
+	</script>
+
+
+
+
+
+
+<form action="login.html" onsubmit="return validate(this.id)" name="book">
+<marquee>*******Cancelling Slot *******</marquee>
+
+<table legend align="center">
+<legend align="center"><b><h3>Cancel your slot</h3></b></legend>
+<tr><td><legend align="center"><label for="User Name">User Name:</label></td>
+<td><input type="text" name="User Name" placeholder="xxxxxx" required></input></legend></td></tr><br>
+
+<tr><td><legend align="center"><label for="Type of Vechile">Type of Vechile:</label></td>
+<td><input type="text" name="Type of Vechile" placeholder="xxxxxx" required></input></legend></td></tr><br>
+
+<tr><td><legend align="center"><label for="vechile number">Vechile Number:</label></td>
+<td><input type="text" name="Vechile Number"  placeholder="xxxxxx"required></input></legend></td></tr><br>
+
+<tr><td><legend align="center"><label for="Location">Location:</label></td>
+<td><input type="text" name="Location"  placeholder="xxxxxx" required></input></legend></td></tr><br>
+
+<tr><td><legend align="center"><label for="Date">Date:</label></td>
+<td><input type="date" id="date" name="date"></legend></td><br></tr>
+
+<tr><td><legend align="center"><label for="Time">Time:</label></td>
+<td><input type="text" name="time" placeholder="From"required size ="5"></input>
+<input type="text" name="time" placeholder="To"required size ="5"></input></legend></tr></td><br>
+
+<tr><td><legend align="center"><label for="Reason">Reason:</label></td>
+<td><input type="text" name="Reason" placeholder="xxxxxx" required></input></legend></td></tr><br>
+
+<tr><td><legend align="center"><input type="reset" name="reset"></input></td>
+<td><button><a href="car thankyou.jpg">Submit</a></button></td></tr>
+</table>
+</form>
+</body>
+</html>

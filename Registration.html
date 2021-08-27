@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Registration form</title>
+<style>
+body{
+background-image:url("./car parking.jpg");
+background-position:center;
+background-size: cover;
+position:absolute;
+}
+</style>
+</head>
+<body bgcolor="grey">
+	<script type="text/javascript">
+		function validate(id){
+			var fname=document.regform.First_Name.value;
+			var lname=document.regform.Last_Name.value;
+			var password=document.regform.Password.value;
+			var username=document.regform.Username.value;
+			var patt=/^[a-zA-Z]+$/;
+			if(patt.test(fname)!=true){
+				alert("FirstName should contain only Characters");
+				return false;
+			}
+			if(patt.test(lname)!=true){
+				alert("LastName should contain only Characters");
+				return false;
+			}
+			if(username.length<6 | username.length>15){
+				alert("Length should be >6 and <15");
+				return false;
+			}
+			var passpatt=/(^[a-zA-z])(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#!]).{6,}$/;
+			if(passpatt.test(password)!=true){
+				alert("Password length is of minimum 6 characters and should contain at least one upper case, one lower case, one digit, one special character and it should start with an alphabet only.");
+				return false;
+			}
+		}
+	</script>
+<form action="login.html" onsubmit="return validate(this.id)" name="regform">
+<marquee>*******Registration page*******</marquee>
+<table align="center" >
+<legend align="center"><b>Registration form</b></legend>
+<tr><td><label for="First Name">First Name:</label></td>
+<td><input type="text" name="First_Name" placeholder="xxxxxx" required></input></td></tr>
+
+<tr><td><label for="Middle Name">Middle Name:</label></td>
+<td><input type="text" name="Middle_Name" placeholder="xxxxxx" required></input></td></tr>
+
+<tr><td><label for="Last Name">Last Name:</label></td>
+<td><input type="text" name="Last_Name" placeholder="xxxxxx" required></input></td></tr>
+<tr><td><label for="Username">ID/Username:</label></td>
+<td><input type="text" name="Username" required></input></td></tr>
+
+<tr><td><label for="Password">Password:</label></td>
+<td><input type="password" name="Password" required size="8"></input></td></tr>
+
+<tr><td><label for="ConfirmPassword">Confirm Password:</label></td>
+<td><input type="password" name="ConfirmPassword" required size="8"></input></td></tr>
+
+<tr><td><input type="reset" name="Reset"></input></td>
+
+
+<tr>
+<td><button><a href="Perceptive car parking.html">submit</a></button></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
